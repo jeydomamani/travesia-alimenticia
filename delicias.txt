@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Mundo - Nuestros Platillos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        principal: '#d35400',
+                        oscuro: '#8b2c00',
+                        claro: '#fff3e6',
+                        neutro: '#f8f4f0'
+                    },
+                    fontFamily: {
+                        sans: ['Arial', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .contenedor {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .sombra-platillo {
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            }
+        }
+    </style>
+</head>
+<body class="bg-neutro font-sans">
+
+    <!-- Encabezado -->
+    <header class="bg-principal text-white py-6 shadow-md">
+        <div class="contenedor px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <h1 class="text-3xl md:text-4xl font-bold flex items-center gap-2">
+                    <i class="fa fa-cutlery"></i>
+                    Sabores del Mundo
+                </h1>
+                <p class="text-lg opacity-90">Los mejores platillos en un solo lugar</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de bienvenida -->
+    <section class="py-12 bg-claro">
+        <div class="contenedor px-4 text-center">
+            <h2 class="text-3xl font-bold text-oscuro mb-4">Descubre Nuestros Platillos</h2>
+            <p class="text-gray-700 max-w-2xl mx-auto text-lg">
+                Tenemos una gran variedad de recetas deliciosas, desde platos tradicionales hasta creaciones especiales. 
+                Cada uno está preparado con mucho cariño y los mejores ingredientes. ¡Echa un vistazo y elige tu favorito!
+            </p>
+        </div>
+    </section>
+
+    <!-- Galería de platillos -->
+    <section class="py-16 contenedor px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Platillo 1 -->
+            <div class="bg-white rounded-xl overflow-hidden sombra-platillo transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Ensalada fresca" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-oscuro mb-2">Ensalada Fresca</h3>
+                    <p class="text-gray-600 mb-4">Mezcla de lechugas, tomate, pepino, zanahoria y aderezo casero. Ideal para comer ligero y saludable.</p>
+                    <span class="inline-block bg-principal/10 text-principal px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fa fa-leaf"></i> Saludable
+                    </span>
+                </div>
+            </div>
+
+            <!-- Platillo 2 -->
+            <div class="bg-white rounded-xl overflow-hidden sombra-platillo transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Pasta con salsa de tomate" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-oscuro mb-2">Pasta Italiana</h3>
+                    <p class="text-gray-600 mb-4">Fideos frescos con salsa de tomate natural, albahaca, ajo y un toque de queso parmesano.</p>
+                    <span class="inline-block bg-principal/10 text-principal px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fa fa-star"></i> Clásico
+                    </span>
+                </div>
+            </div>
+
+            <!-- Platillo 3 -->
+            <div class="bg-white rounded-xl overflow-hidden sombra-platillo transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1594041680534-944c6b1a1d53?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Carne a la parrilla" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-oscuro mb-2">Carne a la Parrilla</h3>
+                    <p class="text-gray-600 mb-4">Corte de carne jugoso, asado al punto exacto, acompañado de papas doradas y ensalada mixta.</p>
+                    <span class="inline-block bg-principal/10 text-principal px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fa fa-fire"></i> Favorito
+                    </span>
+                </div>
+            </div>
+
+            <!-- Platillo 4 -->
+            <div class="bg-white rounded-xl overflow-hidden sombra-platillo transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Sopa de verduras" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-oscuro mb-2">Sopa Casera</h3>
+                    <p class="text-gray-600 mb-4">Caldo concentrado con trozos de pollo, papas, choclo, zanahoria y hierbas aromáticas.</p>
+                    <span class="inline-block bg-principal/10 text-principal px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fa fa-heart"></i> Tradicional
+                    </span>
+                </div>
+            </div>
+
+            <!-- Platillo 5 -->
+            <div class="bg-white rounded-xl overflow-hidden sombra-platillo transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Postre de frutas" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-oscuro mb-2">Postre Especial</h3>
+                    <p class="text-gray-600 mb-4">Mezcla de frutas frescas de temporada, acompañado de crema batida y un toque de miel.</p>
+                    <span class="inline-block bg-principal/10 text-principal px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fa fa-cutlery"></i> Dulce
+                    </span>
+                </div>
+            </div>
+
+            <!-- Platillo 6 -->
+            <div class="bg-white rounded-xl overflow-hidden sombra-platillo transition-transform hover:-translate-y-1">
+                <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                     alt="Pescado frito" class="w-full h-56 object-cover">
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold text-oscuro mb-2">Pescado a la Plancha</h3>
+                    <p class="text-gray-600 mb-4">Filete de pescado fresco, cocinado con hierbas y limón, servido con arroz y ensalada.</p>
+                    <span class="inline-block bg-principal/10 text-principal px-3 py-1 rounded-full text-sm font-medium">
+                        <i class="fa fa-tint"></i> Del Mar
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sección extra -->
+    <section class="py-12 bg-claro">
+        <div class="contenedor px-4 text-center">
+            <h2 class="text-3xl font-bold text-oscuro mb-6">¿Tienes algún platillo favorito?</h2>
+            <p class="text-gray-700 mb-8 max-w-2xl mx-auto">
+                Si quieres que agreguemos más opciones o cambiar alguno, solo dímoslo. ¡Estamos siempre creando cosas nuevas para ti!
+            </p>
+            <button class="bg-principal hover:bg-oscuro text-white font-medium py-3 px-8 rounded-full transition-colors shadow-md">
+                <i class="fa fa-envelope mr-2"></i> Contáctanos
+            </button>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-oscuro text-white py-6">
+        <div class="contenedor px-4 text-center">
+            <p class="mb-2">&copy; 2024 Sabores del Mundo - Todos los platillos con mucho sabor</p>
+            <p class="text-sm opacity-75">Hecho con <i class="fa fa-heart text-principal"></i> para los amantes de la buena comida</p>
+        </div>
+    </footer>
+
+</body>
+</html>
